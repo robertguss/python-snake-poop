@@ -73,15 +73,17 @@ class Food:
 class Poop:
     def __init__(self):
         self.positions = []
+        self.image = pygame.image.load("poop.png")  # Load the poop image
+        self.image = pygame.transform.scale(
+            self.image, (BLOCK_SIZE, BLOCK_SIZE)
+        )  # Scale the image to match BLOCK_SIZE
 
     def add(self, position):
         self.positions.append(position)
 
     def draw(self):
-        poop_font = pygame.font.Font(None, BLOCK_SIZE)
         for pos in self.positions:
-            poop_surface = poop_font.render("💩", True, BLACK)
-            screen.blit(poop_surface, pos)
+            screen.blit(self.image, pos)
 
 
 def start_screen():

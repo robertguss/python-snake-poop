@@ -10,5 +10,7 @@
 #   universal: false
 
 -e file:.
+pillow==10.4.0
+    # via python-snake-poop
 pygame==2.6.1
     # via python-snake-poop
