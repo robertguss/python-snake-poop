@@ -76,11 +76,11 @@ class Food:
 class Poop:
     def __init__(self):
         self.positions = []
-        self.image = pygame.image.load("poop.png")  # Load the poop image
+        self.image = pygame.image.load("assets/poop.png")  # Load the poop image
         self.image = pygame.transform.scale(
             self.image, (BLOCK_SIZE, BLOCK_SIZE)
         )  # Scale the image to match BLOCK_SIZE
-        self.sound = pygame.mixer.Sound("fart.mp3")  # Changed to .mp3
+        self.sound = pygame.mixer.Sound("assets/fart.mp3")  # Changed to .mp3
 
     def add(self, position):
         self.positions.append(position)
