@@ -8,10 +8,6 @@ A clone of the popular game Snake, but with 💩.
 
 2. Install [Rye](https://rye.astral.sh/) if you haven't already:
 
-   ```
-   curl -sSf https://rye-up.com/get | bash
-   ```
-
 3. Clone the repository:
 
    ```
