@@ -5,6 +5,9 @@ import pygame
 # Initialize Pygame
 pygame.init()
 
+# Initialize mixer for sound effects
+pygame.mixer.init()
+
 # Colors
 WHITE = (255, 255, 255)
 RED = (255, 0, 0)
@@ -77,9 +80,11 @@ class Poop:
         self.image = pygame.transform.scale(
             self.image, (BLOCK_SIZE, BLOCK_SIZE)
         )  # Scale the image to match BLOCK_SIZE
+        self.sound = pygame.mixer.Sound("fart.mp3")  # Changed to .mp3
 
     def add(self, position):
         self.positions.append(position)
+        self.sound.play()  # Play the sound when a new poop is added
 
     def draw(self):
         for pos in self.positions:
